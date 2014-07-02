@@ -16,9 +16,9 @@
 
 using namespace std;
 
-const int W = 1600;	// window width
+const int W = 1670;	// window width
 const int S = 1000;	// window height
-const int Q = 1;	// bar width
+const int Q = 2;	// bar width
 const int N = W/Q;	// array size
 const int MAX = S;	// max possible value in the array
 
@@ -50,7 +50,7 @@ int main()
 	
 	srand(time(NULL));
 
-	//window.setFramerateLimit(300);
+	window.setFramerateLimit(300);
 
 	int array[N];
 	int i;
@@ -72,7 +72,7 @@ while(true)
 
 	if (i == 0 || i == 1 || i == 11)
 	{
-		//window.setFramerateLimit(120);
+		window.setFramerateLimit(120);
 		for(i = 0; i < N; ++i)
 		{
 			temp = array[i];
@@ -91,7 +91,7 @@ while(true)
 // triangular arrays
 	else if (i == 2)
 	{
-		//window.setFramerateLimit(120);
+		window.setFramerateLimit(120);
 		for(i = 0; i < N/2; ++i)
 		{
 			array[i] = pixel(i, 0, N/2, 0, MAX);
@@ -111,7 +111,7 @@ while(true)
 	}
 	else if (i == 3)
 	{
-		//window.setFramerateLimit(120);
+		window.setFramerateLimit(120);
 		for(i = 0; i < N/2; ++i)
 		{
 			array[i] = pixel(i, 0, N/2, MAX, 0);
@@ -133,7 +133,7 @@ while(true)
 // randomized array
 	else if (i == 4)
 	{
-		//window.setFramerateLimit(180);
+		window.setFramerateLimit(240);
 		for(i = 0; i < N; ++i)
 		{
 			temp = array[i];
@@ -152,7 +152,7 @@ while(true)
 // reversed array
 	else if (i == 5)
 	{
-		//window.setFramerateLimit(0)
+		window.setFramerateLimit(240)
 	;	for(i = 0; i < N; ++i)
 		{
 			array[i] = pixel(i, 0, N, MAX, 0);
@@ -167,7 +167,7 @@ while(true)
 // randomized array
 	else if (i == 6 || i == 7)
 	{
-		//window.setFramerateLimit(180);
+		window.setFramerateLimit(180);
 		for(i = 0; i < N; ++i)
 		{
 			temp = array[i];
@@ -186,7 +186,7 @@ while(true)
 // reverse sorted array
 	else if (i == 8)
 	{
-		//window.setFramerateLimit(240);
+		window.setFramerateLimit(240);
 		for(i = 0; i < N; ++i)
 		{
 			array[i] = pixel(i, 0, N, MAX, 0);
@@ -201,7 +201,7 @@ while(true)
 // triangular array
 	else if (i == 9)
 	{
-		//window.setFramerateLimit(240);
+		window.setFramerateLimit(240);
 		for(i = 0; i < N/2; ++i)
 		{
 			array[i] = pixel(i, N/2, 0, MAX, 0);
@@ -223,7 +223,7 @@ while(true)
 // sorted array
 	else if (i == 10)
 	{
-		//window.setFramerateLimit(240);
+		window.setFramerateLimit(240);
 		heapsort(array, 0, N-1);
 	}
 
@@ -238,7 +238,7 @@ while(true)
 		window.display();
 	}
 
-	//window.setFramerateLimit(0);
+	window.setFramerateLimit(0);
 ;
 	bool sorted = false;
 	for (int i = 0; array[i] < array[i+1] && i < N-1; ++i)
